@@ -16,9 +16,7 @@ function processarDados(dados){
 rp(options)
 .then(($) => {
   const contatos = []
-  console.log($.html())
   $('.busca_principal_interna').each((i, item) => {
-    console.log($(item).html())
     const contato = {
       imagem: $(item).find('.foto_busca_interna').attr('src'),
       nome: $(item).find('.titulo_busca_interna').text(),
